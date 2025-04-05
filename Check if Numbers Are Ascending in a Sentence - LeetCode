@@ -1,0 +1,15 @@
+class Solution {
+    public boolean areNumbersAscending(String s) {
+        int prev = -1;
+        for(String  c :s.split(" ")){
+            if(Character.isDigit(c.charAt(0))){
+                int num = Integer.parseInt(c);
+                if(num <= prev) return false;
+                    prev = num;
+                }
+                
+            }
+        
+        return true;
+    }
+}
