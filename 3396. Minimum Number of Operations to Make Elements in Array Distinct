@@ -1,0 +1,17 @@
+class Solution {
+    public int minimumOperations(int[] nums) {
+        int count = 0;
+        for(int i=0; i<nums.length; i++){
+            int hash[] = new int[101];
+            for(int j=i; j<nums.length; j++){
+                hash[nums[j]]++;
+                if(hash[nums[j]]==2){
+                    count++;
+                    i+=2;
+                    break;  
+                }
+            }
+        }
+        return count;
+    }
+}
